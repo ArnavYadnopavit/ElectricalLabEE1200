@@ -6,7 +6,7 @@
  \usepackage{subcaption}
  \usepackage{listings}
  \usepackage{circuitikz}
-\title{Lab Report3}
+\title{Lab Report1}
 \author{Arnav Yadnopavit- EE24BTECH11007\\Prajwal - EE24BTECH11051}
 \date{\today}
 
@@ -29,16 +29,16 @@ A low-pass filter allows low-frequency signals to pass while attenuating higher-
 \begin{equation}
 H_n(s) =\frac{V_C(s)}{V_0(s)}= \frac{1}{(1 + RCs)^n}
 \end{equation}
-where $R$ is the resistance, $C$ is the capacitance and $s=j\omega$.
+where $R$ is the resistance and $C$ is the capacitance.
 
 The magnitude response in dB is:
 \begin{equation}
-|H_n(s)|_{dB} = 20n \log_{10}\left(\frac{1}{\sqrt{1-(sRC)^2}}\right)
+|H_n(j\omega)|_{dB} = 20n \log_{10}\left(\frac{1}{\sqrt{1+(\omega RC)^2}}\right)
 \end{equation}
 
 The phase response is:
 \begin{equation}
-\angle H_n(s) = -n \tan^{-1}(w RC)
+\angle H_n(j\omega) = -n \tan^{-1}(\omega RC)
 \end{equation}
 \begin{figure}[H]
     \centering
@@ -65,6 +65,40 @@ The phase response is:
 %#array([  0,-0.81643989,-28.54232711,0.,-8.31030888, -57.64807176,0.,-17.35001135,-59.13023121])
 %#array([  0.  ,  25.92,  77.76,  14.4 ,  60.48, 138.24,  14.4 ,  86.4 ,169.2 ])
 \section*{Readings}
+\subsection*{Stage1}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage1/100/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage1/100/plot.jpeg}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage1/1000/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage1/1000/plot.jpeg}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage1/10000/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage1/10000/plot.jpeg}
+    \end{subfigure}
+\end{figure}
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|}
@@ -78,6 +112,40 @@ The phase response is:
     \end{tabular}
     \caption{Stage1}
 \end{table}
+\subsection*{Stage2}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage2/100/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage2/100/plot.jpeg}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage2/1000/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage2/1000/plot.jpeg}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage2/10000/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage2/10000/plot.jpeg}
+    \end{subfigure}
+\end{figure}
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|}
@@ -90,7 +158,46 @@ The phase response is:
         \hline
     \end{tabular}
     \caption{Stage2}
+
+    
 \end{table}
+\subsection*{Stage3}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage3/100/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage3/100/plot.jpeg}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage3/1000/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage3/1000/plot.jpeg}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage3/4000/para.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figs/Stage3/4000/plot.jpeg}
+    \end{subfigure}
+
+    
+\end{figure}
+
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|}
@@ -144,7 +251,6 @@ The phase response is:
         \includegraphics[height=5cm]{figs/Stage3/Phase.png}
     \end{subfigure}
 \end{figure}
-For codes and readings photos refer \\\url{https://github.com/ArnavYadnopavit/ElectricalLabEE1200/tree/main/LabReport3}\\
-
 \centering{Thank You}
 \end{document}
+
