@@ -1,0 +1,21 @@
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw (6,13.75) to[R] (9.25,13.75);
+\draw (9.25,13.75) to[C] (9.25,10.75);
+\draw (6,13.75) to[sinusoidal voltage source, sources/symbol/rotate=auto] (6,10.75);
+\draw (9.25,13.75) to[R] (11.75,13.75);
+\draw (11.75,13.75) to[C] (11.75,10.75);
+\draw (6,10.75) to[short] (11.75,10.75);
+\draw (11.75,10.75) to (11.75,10.5) node[ground]{};
+\node [font=\large] at (5,12.25) {$\vec{V_0}$};
+\node [font=\large] at (7.5,14.25) {$R$};
+\node [font=\large] at (10.5,14.25) {$R$};
+\node [font=\large] at (8.5,12.25) {$C$};
+\node [font=\large] at (11,12.25) {$C$};
+\node [font=\large] at (12.5,12.25) {$\vec{V_C}$};
+\end{circuitikz}
+}%
+\caption{Stage2}
+\label{fig:my_label}
