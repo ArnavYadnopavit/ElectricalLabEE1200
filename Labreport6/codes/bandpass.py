@@ -30,21 +30,18 @@ H_LPF = (wc2**2) / (s**2 + (wc2 / 0.5) * s + wc2**2)
 H_BPF = H_HPF * H_LPF
 
 # Compute Magnitude (in dB) and Phase (in degrees)
-magnitude_HPF = 20 * np.log10(np.abs(H_HPF))
-phase_HPF = np.angle(H_HPF, deg=True)
-
-magnitude_LPF = 20 * np.log10(np.abs(H_LPF))
-phase_LPF = np.angle(H_LPF, deg=True)
-
 magnitude_BPF = 20 * np.log10(np.abs(H_BPF))
 phase_BPF = np.angle(H_BPF, deg=True)
+
+# Experimental Data Points
+exp_frequencies = [50, 160, 1000, 1600]
+exp_magnitudes = [-21.94, -7.14, -3.56, -6.66]
 
 # Plot Bode Magnitude Response
 plt.figure(figsize=(10, 6))
 plt.subplot(2, 1, 1)
-plt.semilogx(frequencies, magnitude_HPF, label="HPF Magnitude")
-plt.semilogx(frequencies, magnitude_LPF, label="LPF Magnitude")
 plt.semilogx(frequencies, magnitude_BPF, label="BPF Magnitude", linestyle='dashed')
+plt.scatter(exp_frequencies, exp_magnitudes, color='red', label="Experimental Data", zorder=3)
 plt.title("Bode Plot of Bandpass Filter")
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Magnitude (dB)")
@@ -53,8 +50,6 @@ plt.grid(which="both", linestyle="--")
 
 # Plot Bode Phase Response
 plt.subplot(2, 1, 2)
-plt.semilogx(frequencies, phase_HPF, label="HPF Phase")
-plt.semilogx(frequencies, phase_LPF, label="LPF Phase")
 plt.semilogx(frequencies, phase_BPF, label="BPF Phase", linestyle='dashed')
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Phase (degrees)")
@@ -63,4 +58,3 @@ plt.grid(which="both", linestyle="--")
 
 plt.tight_layout()
 plt.show()
-
