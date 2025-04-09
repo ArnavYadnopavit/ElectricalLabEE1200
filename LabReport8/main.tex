@@ -9,6 +9,7 @@
     \usetikzlibrary{matrix}
     \usepackage{pdfpages}
     \usepackage{url}
+    \usepackage{float}
     
     \setlength{\droptitle}{-4em}
     
@@ -22,7 +23,12 @@
     \begin{document}
     
     \maketitle
-    \section{First digit}
+    \section{Aim}
+    To design and implement a digital up/down counter that displays the number of people currently
+in the mess during peak lunch hours. The system will help students decide whether they can enter
+the mess based on the current occupancy. The maximum count is set to 99.
+    \section{Theory}
+    \section*{First digit}
     \section*{BCD Up Counter State Transition Table (0 to 9 with Don't Cares)}
     
     \begin{center}
@@ -279,7 +285,7 @@
     T_3 = Q_0 \cdot (Q_3 + Q_2 Q_1) \cdot B_u \cdot \overline{B_d} + \overline{Q_2} \cdot \overline{Q_1} \cdot \overline{Q_0} \cdot \overline{B_u} \cdot B_d
     \]
     
-    \section{\textbf{Second Digit}}
+    \section*{\textbf{Second Digit}}
     We know that the state transition table and k-maps for the second digit will be same but we have to ensure that second digit only changes when first digit either transits form 9 to 0 or 0 to 9
     i,e
     \begin{center}
@@ -343,19 +349,25 @@
       For all the required interconnections across components and breadboards.
     \end{itemize}
     \subsection{Circuit Schematic}
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{counter_circuit.jpeg}
-        \caption{Breadboard implementation of a BCD up/down counter using T flip-flops and logic gates.}
-        \label{fig:bcd_counter}
+        \caption{BCD counter circuit simulation.}
+	\label{fig(a):bcd_counter_simulating}
     \end{figure}
+    \begin{figure}[H]
+	    \centering
+	    \includegraphics[width=\textwidth]{circuit.jpeg}
+	    \caption{BCD counter circuit design}
+	    \label{fig(b):BCD_Counter_design}
+    \end{figure}
+    \newpage
     \subsection{Wiring}
     \includepdf[pages=-]{bcd counter.pdf}
-    \subsection{Simulation}
     \section{Conclusion}
     The above circuit performs number counting from 0 to 99.When up button is pressed the number increases by one and down button is pressed number decreases by one
     
-    To refer arduino code and working tinkercad video refer to \\
+    To refer arduino code and working video refer to \\
     \url{https://github.com/ArnavYadnopavit/ElectricalLabEE1200/tree/main/Labreport8}\\
     
  \centering
